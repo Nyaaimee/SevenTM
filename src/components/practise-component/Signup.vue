@@ -223,6 +223,7 @@ export default {
 
       const response = await axios.post(serverEndpoint, payload)
       console.log(response)
+      this.$router.push({name:'home', username:Username})
    },
   }
 }
