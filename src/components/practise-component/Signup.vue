@@ -1,6 +1,16 @@
 <template>
   <div
-    class="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8"
+    class="
+      min-h-full
+      flex
+      items-center
+      justify-center
+      py-12
+      px-4
+      sm:px-6
+      lg:px-8
+      bg-neutral-900
+    "
   >
     <div class="max-w-md w-full space-y-8">
       <div>
@@ -9,101 +19,46 @@
           src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
           alt="Workflow"
         />
-        <h2 class="mt-6 text-center text-1xl font-normal text-gray-900">
-          Seven Task Manager
-        </h2>
-        <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900">
-          Create Acount
-        </h2>
+
+        <h4 class="mx-auto h-12 w-auto text-white">Seven task manager</h4>
       </div>
-      <form class="mt-8 space-y-6" method="POST" v-on:submit="handlesubmit">
+      <form class="space-y-6 w-100 p-10 m-10 bg-black" action="#" method="POST">
         <input type="hidden" name="remember" value="true" />
         <div class="rounded-md shadow-sm -space-y-px">
-          <div>
-            <label for="UserName" class="sr-only">John Doe</label>
-            <input
-              id="UserName"
-              name="UserName"
-              type="text"
-              v-model="UserName"
-              autocomplete="UserName"
-              required
-              class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-              placeholder="John Doe"
-            />
-            <label for="email-address" class="sr-only">Email address</label>
-            <input
-              id="email-address"
-              name="email"
-              type="email"
-              v-model="Email"
-              autocomplete="email"
-              required
-              class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-              placeholder="Email address"
-            />
-          </div>
-          <div>
-            <label for="password" class="sr-only">Password</label>
-            <input
-              id="password"
-              name="password"
-              type="password"
-              v-model="Password"
-              autocomplete="current-password"
-              required
-              class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-              placeholder="Password"
-            />
-          </div>
+          <div class="">
+            <h2 class="my-4 text-left text-3xl text-white ">
+             Log in to scale
+            </h2>
+            <div>
+          <label for="email" class="block text-left mb-1 text-white">Email</label>
+          <input type="text"  placeholder="enter email" class="bg-black border border-white text-sm text-white px-4 py-2 outline-none rounded-md w-full" />
         </div>
 
-        <div class="flex items-center justify-between">
-          <div class="flex items-center">
-            <input
-              id="remember-me"
-              name="remember-me"
-              type="checkbox"
-              class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded"
-            />
-            <label for="remember-me" class="ml-2 block text-sm text-gray-900">
-              Remember me
-            </label>
-          </div>
-
-          <div class="text-sm">
-            <a
-              href="#"
-              class="font-medium text-indigo-600 hover:text-indigo-500"
-            >
-              Forgot your password?
-            </a>
-          </div>
+        <div class="my-2">
+          <label for="email" class="text-left block mb-1 text-white">Password</label>
+          <input type="text"  placeholder="Your password" class="bg-black border border-white text-sm text-white px-4 py-2 outline-none rounded-md w-full" />
         </div>
 
+      </div>
+            <div class="text-left text-green-500">
+              <span class="text-xs">Forgot Password?</span></div>
+        </div>
+        <button class="mt-4 w-full text-black py-2 rounded-md text-sm tracking-wide bg-white font-bold">Login</button>
         <div>
-          <button
-            type="submit"
-            class="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-          >
-            <span class="absolute left-0 inset-y-0 flex items-center pl-3">
-              <!-- Heroicon name: solid/lock-closed -->
-              <svg
-                class="h-5 w-5 text-indigo-500 group-hover:text-indigo-400"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-                aria-hidden="true"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z"
-                  clip-rule="evenodd"
-                />
-              </svg>
-            </span>
-            Sign in
-          </button>
+          <p class="text-sm">_______________OR________________</p>
+        </div>
+        <button class="mt-4 w-full text-white py-2 rounded-md text-sm tracking-wide 
+        flex flex-row items-center justify-around border border-white">
+           <img :src="require('../../assets/apple.png')" alt="apple" width="25" height="25"/>
+           continue with Apple
+           </button>
+        <button class="mt-4 w-full text-white py-2 rounded-md text-sm tracking-wide 
+        flex flex-row items-center justify-around border border-white">
+          <img :src="require('../../assets/go12.png')" alt="apple" width="25" height="25"/>Continue with Google</button>
+          <div class="text-xs">
+          <p>Scale uses cookies for analytics personalized content and add. By using scale's services you agree
+            to this use of cookies.<span class="text-white">Learn more</span>
+          </p>
         </div>
       </form>
     </div>
@@ -111,36 +66,48 @@
 </template>
 
 <script>
-import axios from 'axios';
+import axios from "axios";
 export default {
-  name: 'Signup-app',
+  name: "Sign_up",
+  computed: {},
+  methods: {
+    async signIn() {
+      let username = this.username;
+      let email = this.email;
+      let password = this.password;
+      let firstName = this.firstName;
+      let lastName = this.lastName;
+      console.log(username, email, password, firstName, lastName);
+    
+    const serverEndpoint = "https://kingscorp.xyz/api/v1/app/appRegister";
+    const payload = {
+      username:username,
+      email:email,
+      password:password,
+      firstName:firstName,
+      lastName:lastName
+    };
+    const response =  await axios.post(serverEndpoint,payload);
+    localStorage.setItem("user", JSON.stringify(response.data.data))
+    
+    this.$router.push('/home')
+    
+    }
+  },
   data() {
     return {
-      UserName: '',
-      Email: '',
-      Password: '',
+      username: "",
+      email: "",
+      password: "",
+      firstName: "",
+      lastName: "",
     };
-  },
-  methods: {
-    async handlesubmit(e) {
-      e.preventDefault();
-      let UserName = this.UserName;
-      let Email = this.Email;
-      let Password = this.Password;
-      console.log(UserName, Email, Password);
-
-      const serverEndpoint = 'https://kingscorp.xyz/api/v1/app/appRegister';
-
-      const payload = {
-        username: UserName,
-        email: Email,
-        password: Password,
-      };
-
-      const response = await axios.post(serverEndpoint, payload);
-      console.log(response);
-      this.$router.push({ name: 'home', query: { username: UserName } });
-    },
   },
 };
 </script>
+
+<style>
+.form{
+  background: #333;
+}
+</style>

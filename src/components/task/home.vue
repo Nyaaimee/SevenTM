@@ -91,9 +91,8 @@
     </div>
   </div>
 </template>
-
 <script>
-  export default {
+export default {
   name: "tasks-home",
   data(){
     return {
@@ -131,9 +130,8 @@
   }
 };
 </script>
-
 <style>
-  .capitalize {
+.capitalize {
   text-transform: capitalize;
-  }
+}
 </style>
